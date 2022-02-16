@@ -2,8 +2,8 @@
 title: "Group Project 1"
 subtitle: "Biology 368/664 Bucknell University"
 output: html_notebook
-author: Prof. Ken Field
-date: 9 Feb 2022
+author: Ian Mawn, Kaitlin McLain, and Emily Scholfield
+date: 21 Feb 2022
 ---
 
 ```{r Load Libraries, include=FALSE}
@@ -28,7 +28,7 @@ Examples could be one of the new core Biology classes, another 300-level course 
 You will work with the same groups as for the Homework 2 Peer review. 
 
 ```{r}
-PeerGroups1 <- read_csv("../00-Syllabus/PeerGroups1.csv")
+PeerGroups1 <- read_csv ("PeerGroups1.csv")
 PeerGroups1 %>% 
   select(-MAJR, -CLAS, ) %>%
   print()
