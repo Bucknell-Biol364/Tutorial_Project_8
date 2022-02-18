@@ -8,9 +8,70 @@ date: 21 Feb 2022
 
 ```{r Load Libraries, include=FALSE}
 # Load other packages here.
-if (!require("datasauRus")) install.packages("datasauRus"); library(datasauRus)
 if (!require("tidyverse")) install.packages("tidyverse"); library(tidyverse)
 ```
+
+```{r echo=FALSE}
+IrisData <- read_csv ("iris.csv")
+```
+
+1. Loading data and libraries
+
+
+
+
+2. Using R
+
+
+
+
+
+3. Exploring data
+
+
+
+
+
+4. Graphs/Visualization
+
+
+
+
+
+5. Hypothesis Testing with Statistical Tests
+
+
+
+
+
+6. Drawing Conclusions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 This project will require you to develop a tutorial to teach Bucknell students how to use R for graphing and data analysis. 
 
