@@ -6,22 +6,36 @@ author: Ian Mawn, Kaitlin McLain, and Emily Scholfield
 date: 21 Feb 2022
 ---
 
-```{r Load Libraries, include=FALSE}
-# Load other packages here.
-if (!require("tidyverse")) install.packages("tidyverse"); library(tidyverse)
-```
+Welcome to this R tutorial for Bio208! This is designed for a very beginner to R, so we are going to start with the very basics.
 
-```{r echo=FALSE}
-IrisData <- read_csv ("iris.csv")
-```
+Typically, when doing data analysis in R, we want to begin by loading in the data and packages that we will use.
 
 1. Loading data and libraries
 
+R has many built in functions that will allow us to do perform all kinds of actions. However, sometimes it is useful to load some additional functions that other R users have created. We do this by loading in libraries. In the coade chunk below (the grey box, this is where code is typed and run) you can see that I have loaded in some libraries.
 
+```{r Load Libraries, include=FALSE}
+# Load other packages here.
+#I just put in any libraries we might need. Don't know if we actually need them, or need more.
+if (!require("tidyverse")) install.packages("tidyverse"); library(tidyverse)
+if (!require("cowplot")) install.packages("cowplot"); library(cowplot)
+if (!require("UsingR")) install.packages("UsingR"); library(UsingR)
+if (!require("readxl")) install.packages("readxl"); library(readxl)
+```
+Libraries:
+For some examples, one library is called tidyverse. It contains a ton of useful tools, but the one most relevant to this tutorial is called ggplot. ggplot allows us to create all kinds of plots to visualize our data, which you will learn more about below. You can also see the library called cowplot. cowplot is useful as it allows us to easily change the aesthetics of our graphs, and keep the designs consistent between different graphs. Finally, you can see the library readxl. This is useful for exactly what it sounds like... reading Microsoft Excel files! This bring us to the next step, entering data into R.
 
+Data:
+In the code chunk below I am going to read in some data regarding features of different species of iris (the flower). There are a few main parts of the code to think about when loading in data. First, the read_csv() function tells R to load in the comma separated values (csv) file, and the name of the file goes in the parentheses. Here, you can see that our data is called "iris.csv". It is very important to type the file name exactly as it is saved on your computer, otherwise R will not be able to find it. Once the data is loaded in, we need to call it something. That is what the "IrisData <-" part of the code means. In English, it translates to: IrisData is the data found in the csv file "iris.csv".
+
+```{r echo=FALSE}
+IrisData <- read_csv ("iris.csv")
+IrisData
+```
 
 2. Using R
 
+Now that we have the pieces we need, we can start learning about R. 
 
 
 
