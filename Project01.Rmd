@@ -6,15 +6,15 @@ author: Ian Mawn, Kaitlin McLain, and Emily Scholfield
 date: 21 Feb 2022
 ---
 
-Welcome to this R tutorial for Bio208! This is designed for a very beginner to R, so we are going to start with the very basics.
+# R for Dummies (BIOL208 Edition)
+
+Welcome to this R tutorial for BIOL208! This is designed for someone who is brand new to R, so we are going to start with the very basics. To make this interesting, we'll be looking at a dataset on irises since plants are extremely important to the study of ecology and evolution. To best follow along, you should have a new markdown file open in R studio where you can copy and paste line sof code from thsi tutrotial for you to practice running on your own.
 
 Typically, when doing data analysis in R, we want to begin by loading in the data and packages that we will use.
 
-1. Loading data and libraries
-
-R has many built in functions that will allow us to do perform all kinds of actions. However, sometimes it is useful to load some additional functions that other R users have created. We do this by loading in libraries. In the coade chunk below (the grey box, this is where code is typed and run) you can see that I have loaded in some libraries.
-
-```{r Load Libraries, include=FALSE}
+### Loading data and libraries
+R has many built in functions that will allow us to perform all kinds of actions. However, sometimes it is useful to load some additional functions that other R users have created. We do this by loading in libraries. In the code chunk below (the grey box; this is where code is typed and run) you can see that I have loaded in some libraries.
+```{r Load Libraries}
 # Load other packages here.
 #I just put in any libraries we might need. Don't know if we actually need them, or need more.
 if (!require("tidyverse")) install.packages("tidyverse"); library(tidyverse)
@@ -22,42 +22,52 @@ if (!require("cowplot")) install.packages("cowplot"); library(cowplot)
 if (!require("UsingR")) install.packages("UsingR"); library(UsingR)
 if (!require("readxl")) install.packages("readxl"); library(readxl)
 ```
-Libraries:
-For some examples, one library is called tidyverse. It contains a ton of useful tools, but the one most relevant to this tutorial is called ggplot. ggplot allows us to create all kinds of plots to visualize our data, which you will learn more about below. You can also see the library called cowplot. cowplot is useful as it allows us to easily change the aesthetics of our graphs, and keep the designs consistent between different graphs. Finally, you can see the library readxl. This is useful for exactly what it sounds like... reading Microsoft Excel files! This bring us to the next step, entering data into R.
 
-Data:
-In the code chunk below I am going to read in some data regarding features of different species of iris (the flower). There are a few main parts of the code to think about when loading in data. First, the read_csv() function tells R to load in the comma separated values (csv) file, and the name of the file goes in the parentheses. Here, you can see that our data is called "iris.csv". It is very important to type the file name exactly as it is saved on your computer, otherwise R will not be able to find it. Once the data is loaded in, we need to call it something. That is what the "IrisData <-" part of the code means. In English, it translates to: IrisData is the data found in the csv file "iris.csv". Note: data can also be loaded in from an excel file as opposed to a csv file using the function read_excel().
+##### Libraries:
+For some examples, one library is called tidyverse. It contains a ton of useful tools, but the one most relevant to this tutorial is called **ggplot**. **ggplot** allows us to create all kinds of plots to visualize our data, which you will learn more about below. You can also see the library called **cowplot**. **cowplot** is useful as it allows us to easily change the aesthetics of our graphs, and keep the designs consistent between different graphs. Finally, you can see the library **readxl**. This is useful for exactly what it sounds like... reading Microsoft Excel files! This bring us to the next step, entering data into R.
 
-```{r echo=FALSE}
+##### Data:
+In the code chunk below I am going to read in some data regarding features of different species of iris (the flower). There are a few main parts of the code to think about when loading in data. First, the **read_csv()** function tells R to load in a comma separated values (csv) file with the name of the file in the parentheses. Here, you can see that our data is called "iris.csv". It is very important to type the file name exactly as it is saved on your computer, otherwise R will not be able to find it. Once the data is loaded in, we need to call it something. That is what the "IrisData <-" part of the code means. In English, it translates to: IrisData is the data found in the csv file "iris.csv". When you read in a data file, you will see it appear in your "Environment" on the right of R studio. If you click on "IrisData" in your Environment, a new tab will appear with all of the data. 
+```{r Reading in Data}
 IrisData <- read_csv ("iris.csv")
-IrisData
 ```
 
-2. Using R
+What happens if your data is in an excel file instead of a csv file? Fear not! Data can also be loaded in from an excel file using the **read_excel()** function instead of **read_csv()**. In a normal data analysis, you would only read in the data once using *either* the **read_csv()** *or* **read_excel()** functions. Your data will only read in properly if the file type matches the function you're using, so pay attention to how your data is saved before you read it in!
 
-Now that we have the pieces we need, we can start learning about R. You have already seen a few aspects of R in the last section, but here we will go into some more detail. 
+### Using R (the basics)
+Now that we have the pieces we need, we can start learning about R. You have already seen a few aspects of R in the last section, but here we will go into some more detail about the basic functions of R to get you started with analyzing data.
 
-This document is an R markdown file. The highlights of a markdown file is that you can have mostly regular text (not code), while code goes is specific sections. This is especially useful as it allows for lots of explanation of what the code does, like we need here for a tutorial. As mentioned before, the grey sections are called code chunks, and this is where the actual code is written and ran. A code chunk can be inserted anywhere by clicking the green box with a C and a plus sign, and it will allow you to choose a coding language (although since this is about R, we will only use that). In the top line you can see ```{r}. This can be used to name your code chunks if you wish, although this is not necessary. 
+This document is an R markdown file. The highlights of a markdown file is that you can have mostly regular text (not code) but still include code and their output  in specific sections. This is especially useful as it allows for lots of explanation of what the code does, like we need to do here for a tutorial. Markdowns are also convenient because they can be converted to many different formats such as a PDF (like you're reading), an html, and others.
 
-```{r}
-#example of a code chunk
+As mentioned before, the grey sections are called code chunks. This is where the actual code is written and ran. You can insert a code chunk to your markdown file by clicking the green box with "^+^C" at the top of R studio. When you do this, a drop-down menu appears where you can choose a coding language (since this is about R, we will only use that). Refer to the image below if you can't find the code chunk button.
+
+![Code Chunk Image](../Tutorial_Project_8/Images/CodeChunkImage.png)
+
+In the top line of your new code chunk, you'll see **```{r}**. This can be used to name your code chunks if you wish. This can help keep your thoughts organized and is actually an important part of knitting your file...Say what??? We're going to be knitting? Don't worry, we'll explain *all* the details about knitting in the later sections of this tutorial. For now just know that naming your code chunks can help organize your thoughts and can save you problems with knitting later down the road if you make sure to name your each of your code chunks something unique.
+```{r Code Chunk Example}
+#Example code chunk
 4+1
-#This line will not run.
-
+#This line will not run
 ```
 
-Code within chunks can be ran in a few ways. In the top right of a chunk is a green play button that will run every line of code in the chunk. Alternatively, you can place your cursor on a line you want to run and hit command + enter (or control + enter). A last way you can run code is by clicking the run button in the top of the screen, which will bring up a few options for running code. One option to point out here is that you can run all of the code chunks in the document at once (in order from top to bottom), which is useful for ensuring your code is functional when finalizing a document. 
+Code within chunks can be run in a few ways:
+1. In the top right of a chunk is a green play button that will run every line of code in the chunk.
+2. Placing your cursor on a line you want to run, or highlight it, and hit command + enter (or control + enter).
+3. Click the run button in the top of the screen, which will bring up a few options for running code. You can run all of the code chunks in your document at once (in order from top to bottom) with this option. This is useful for ensuring your code is functional when finalizing a document.
 
-Looking at the example code chunk, there a few points to make about coding in R. First, you can see a green line that starts with a "#". The hastag/number/pound symbol tells R that this line is a comment, and that it should not be run as code. If you run the code chunk you will see that that line is skipped, and the only output comes from the addition found in the next line (the output should be 5. Comments are very useful for explaining your code as you write it, which is helpful for yourself in the future, so you can remind yourself how code works, and for other readers. 
+![Code Chunk Image](../Tutorial_Project_8/Images/RunningCode.png)
 
-Another useful bit of information is how to assign values to objects. Essentially, this is a way of naming things. You have actually already seen this is action, where we assigned our iris data to the object IrisData using the assign operator (<-). Lets go to the next code chunk to see an example.
+Looking at the example code chunk above, there a few points to make about coding in R. First, you can see a green line that starts with a "#". The hashtag/number/pound symbol tells R that this line is a comment, and that it should not be run as code. If you run the code chunk you will see that that line is skipped, and the only output comes from the addition found in the next line (the output should be 5 since 4+1=5). Comments are very useful for explaining your code as you write it. This is helpful for yourself in the future, so you can remind yourself how different code works, and for other people reading through or referencing your code.
 
-```{r}
-#Essentially, the <- means store this value under this name, so you can think of the symbol as the word is or equals. 
+Another useful bit of information is how to assign values to objects. Essentially, this is a way of naming things. You have actually already seen this in action, where we assigned our iris data to the object IrisData using the assign operator **<-**. Lets go to the next code chunk to see an example and notice how all of these values/variables will get stored in the Environment.
+```{r Assign}
+#Essentially, the <- means "store this value under this name," so you can think of the symbol as the word "is" or "equals." 
 this <- "that"
-#in the line above we are storing the word that under the name this. So the code would read in English "this is that". And if we print out the object this you will see that it outputs the word that. (run the next line - but make sure you ran the above line first)
+
+#In the line above we are storing the word that under the name this. So the code would read in English "this is that". And if we print out the object (a.k.a. run the code) "this," it will output the word "that." Try this out yourself! In your markdown file, try running the next line, but be sure to run the line above first.
 this
-#other examples
+
+#Other examples
 n <- 5
 z <- 10 
 n+z
@@ -66,70 +76,87 @@ z/n
 five * 10
 ```
 
-This is especially useful for storing data under a name, like we did above with the iris data. If you run the code below it will print out all of the iris data.
-```{r}
+This is especially useful for storing data under a specific name, like we did at the beginning with the iris data. If you run the line of code below, it will print out all of the iris data.
+```{r Printing Data}
 IrisData
 ```
-We can also access specific variables within the data using the $ symbol. So if we only wanted to see the data about petal length, we can run the following code
-```{r}
+
+We can also access specific variables within the data using the **$** symbol. So if we only wanted to see the data about petal length, we can run the following code:
+```{r Print Out Specific Variable}
 IrisData$petal.length
 ```
 
-Well, those are three major things to know moving forward, and more tools will be provided as this tutorial continues.
+Those are the basic functions you should know about R moving forward. Now we can explore more tools you can use to explore and analyze a set of data.
 
-3. Exploring data
+### Exploring Your Data
+Once we have our data, it is important to explore it before beginning analysis. First, you want to come up with the question that you will attempt to answer *before analyzing your data*. This is important since we want to remain objective throughout the data analysis process.
 
-Once we have data, it is important to explore that data before beginning analysis. First, you want to come up with the question that you will attempt to answer, before analyzing data. This is important as we want to remain objective throughout the data analysis process. 
+For this tutorial, we're interested in the following questions:
+1. Are sepal and petal dimensions correlated within a single species?
+2. Do sepal and petal dimensions differ between Iris species?
 
-One way to begin to understand your dataset is to run the structure function: str(). This outputs lots of information about the dataset. It will show you each column of the data, the class of the column (what type of data is it: a number (num), a word (or character: chr), etc), the number of observations in the column, and some of the data within each column. This is useful for ensuring that each column contains the data you expect. For example, one column in the dataset is sepal length, so I would expect to find in the output of str() that there is a column called sepal length (it is actually called sepal.length, but that is good), it should be a number, there should be 150 observations, and the data should actually be numbers.
+One way to begin to understand your dataset is to run the **str()** (structure) function. This outputs lots of information about the dataset. It will show you each column of the data, the class of the column (what type of data it is: a number (num), a word (or character: chr), etc), the number of observations in the column, and some of the data within each column. This is useful for ensuring that each column contains the data you expect. For example, one column in the dataset is sepal length, so I would expect to find in the output of str() that there is a column called sepal length (it is actually called sepal.length, but that is good), it should be a number, there should be 150 observations, and the data should actually be numbers.
 
-In the chunk below I will run str() on the iris dataset. Make sure that the data looks right.
-
-```{r}
+In the chunk below I will run str() on the iris dataset to confirm my expectations and make sure that the data looks right.
+```{r Using str()}
 str(IrisData)
 ```
 
-One thing that stands out to me after running this is the variety column. If we want to compare features between species of irises, this column will be very useful. To make those comparisons easier, I am going to tell R that this column is categorical, and we can group the data into those categories using the as.factor() function below.
-
-```{r}
-#making the variety column a factor
-IrisData$variety <- as.factor(IrisData$variety)
-#this code tells R to replace the variety column of IrisData with the variety column as a factor
-str(IrisData)
-#Running str() again we can see that variety is now a factor with 3 levels: the 3 different species.
+One thing that stands out to me after running **str()** is the "variety" column. For starters, you may want to rename the column to something that's easier for you to understand, such as "species." You can do this using the **rename()** function as explained below. Once you've run that code, you can click on the dataset in your Environment and should see the column has been renamed.
+```{r Renaming variable}
+#The rename() function allows this format: DataName <- rename(DataName, NewVariableName = OldVariableName)
+IrisData <- rename(IrisData, species = variety)
 ```
 
-It can also be useful to look at the top and bottom of your dataset using the head() and tail() functions, which show the first 6 rows and last 6 rows respectively. This is useful to ensure that the data makes sense (the data is numeric if you were expecting that) and to make sure that the correct number of rows are present - make sure that the last few rows are not empty. Or if the data is time dependent, make sure that the first times are in the first row and the last times are at the end.
+If we want to compare variables between species of irises, this column will be very useful. To make those comparisons easier, I am going to tell R that this variable is categorical. We can group the data into those categories using the as.factor() function below.
+```{r Changing Variable type using as.factor()}
+IrisData$species <- as.factor(IrisData$species)
+#This code tells R to replace the current character species column of IrisData with the new factor species column.
 
-```{r}
-#This chunk will output two functions, and it will separate them into two windows if you run the whole chunk. Here, the left window is the head function, and the right window is the tail function. (Just so you know)
+str(IrisData)
+#Running str() again shows that species is now a factor with 3 levels which correspond to the 3 different species.
+```
+
+It can also be useful to look at the top and bottom of your dataset using the **head()** and **tail()** functions, which show the first 6 rows and last 6 rows respectively. This is useful to ensure that the data makes sense (the data is numeric if you were expecting that) and to make sure that the correct number of rows are present (for example, make sure that the last few rows are not empty). Or, if the data is time dependent, you can use these functions to make sure that the first times are in the first row and the last times are at the end.
+
+```{r head() and tail()}
+#This chunk will output two functions, and it will separate them into two windows if you run the whole chunk. Here, the left window is the head function, and the right window is the tail function. The output windows will always proceed left to right to correspond with your code from top to bottom.
 head(IrisData)
 tail(IrisData)
 ```
 
-A very useful function for data exploration is summary(). This outputs the mean, median, min, max, and first and third quartiles of any numeric data, and the number of obserations within our factor. This is an important step in any data exploration. This can be useful for validating your data against external sources. If external sources show that the average sepal length of irises is 100 cm long, but our sepal lengths range from 4.3 to 7.9 cm, something might be wrong. (Luckily the avg is closer to 5-7 cm, so our data does make sense).
+A very useful function for data exploration is **summary()**. This outputs the mean, median, min, max, and first and third quartiles of any numeric data, and the number of observations within our variables. This is an important step in any data exploration. This can be useful for validating your data against external sources. If external sources show that the average sepal length of irises is 100 cm long, but our sepal lengths range from 4.3 to 7.9 cm, something might be wrong. Luckily the average is closer to 5-7 cm, so our data does make sense.
 
-```{r}
+```{r summary()}
 summary(IrisData)
 ```
 
+### Visualization with Graphs
+Now that we've spent a substantial amount of time exploring and organizing our data, we're ready to start analyzing it! The first step here is to visualize our data since up until this point, all we've been looking at are numbers (which can be hard for identifying relationships and patterns between variables). When considering what graphs may be best for visualizing our data, we should consider our questions of interest and 
 
 
-4. Graphs/Visualization
+### Hypothesis Testing with Statistical Tests
 
+When using statistical tests, always be sure to check the assumptions made by the particular test you plan to use. This is important because many common statistical tests, including the two-sample t-test we will use here, assume that the datasets being compared are normally distributed. While much biological data is normally distributed, this is not always true, so be sure to explore and understand the behavior of your data before performing tests.
 
+```{r}
+#shapiro.test()
+```
 
+If the data you are using are not normally distributed, test to see if a logarithmic transformation would make the distribution normal. If so, you should use the log-transformed data. If not, continue on with the original, non-transformed data but note in your report that any statistical test results should be interpreted with caution, given that the base requirements for accurate use of the test have not been met.
 
+```{r}
+#LogPetalLength <- log(petal.length)
+```
 
-5. Hypothesis Testing with Statistical Tests
+However, each test which assumes normality also has a sample size requirement which can allow for them to produce accurate results using non-normal data. For a two-sample t-test, each group is required to have a sample size of at least 15 observations to overcome the need for normality. This cutoff is different for each type of test. Thus, if your samples fit this requirement, you can proceed without worrying about normality.
 
+### Drawing Conclusions/Additional Tools
 
+##Explanation of p-values
+A p-value represents the probability that the null hypothesis is true given the outcome observed. For most purposes, a p-value of 0.05 or lower is considered statistically significant. However, staunchly relying on this value comes with some concerns, because although it is commonly used and accepted, it is essentially an arbitrary cutoff. Thus, be sure to understand what this cutoff means so you can accurately express the strength of each result. 
 
-
-
-6. Drawing Conclusions
-
-
+Remember, a p-value of 0.05 means that there is a 5% chance of the observations being as they are if the null hypothesis is true. Thus, if you test 20 variables, it is statistically likely that at least one of them will show significance simply by chance.
 
 
 
