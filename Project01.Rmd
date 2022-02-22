@@ -226,7 +226,7 @@ Up until this point we've been looking at the data with some questions in mind a
 #### Requirements for Tests  
 Now we can move on to analyzing our data more critically with statistical testing for specific hypotheses. When using statistical tests, always be sure to check the assumptions made by the particular test you plan to use. This is important because many common statistical tests, including the two-sample t-test we will use here, assume that the datasets being compared are normally distributed. While much biological data is normally distributed, this is not always true, so be sure to explore and understand the behavior of your data before performing tests.
 
-The **shapiro.test** function allows us to check if our data is normally distributed. If the data is normally distributed, the p-value returned by the shapiro test should be greater than 0.05. If there are multiple groups/populations within a data set (for example, multiple species of iris), it's important to test for a normal distribution within each of those populations separately. Looking at the distribution as a whole may lead us to think the data is not normally distirbuted when it actually is within each population. This is actually the case for us, as you can see with the output below.
+The **shapiro.test** function allows us to check if our data is normally distributed. If the data is normally distributed, the p-value returned by the shapiro test should be greater than 0.05. If there are multiple groups/populations within a data set (for example, multiple species of iris), it's important to test for a normal distribution within each of those populations separately. Looking at the distribution as a whole may lead us to think the data is not normally distributed when it actually is within each population. This is actually the case for us, as you can see with the output below.
 ```{r Shapiro Test}
 shapiro.test(IrisData$petal.length) #Not normally distributed as a whole (p = 7.412e-10 < 0.05)
 shapiro.test(IrisData$petal.length[IrisData$species=="Setosa"]) #Normally distributed (p = 0.05481 > 0.05)
@@ -234,14 +234,21 @@ shapiro.test(IrisData$petal.length[IrisData$species=="Versicolor"]) #Normally di
 shapiro.test(IrisData$petal.length[IrisData$species=="Virginica"]) #Normally distributed (p = 0.1098 > 0.05)
 ```
 
-If the data you are using is not normally distributed, test to see if a logarithmic transformation would make the distribution normal. If so, you should use the log-transformed data. If not, continue on with the original, non-transformed data but note in your report that any statistical test results should be interpreted with caution, given that the base requirements for accurate use of the test have not been met.
+If the data you are using is not normally distributed, test to see if a logarithmic transformation would make the distribution normal. If so, you should use the log-transformed data. If not, continue on with the original, non-transformed data but note in your report that any statistical test results should be interpreted with caution, given that the base requirements for accurate use of the test have not been met. 
+
+Since the data for petal length is normally distributed within each species, a log transformation is not necessary in our case. We will proceed with the non-transformed data. However, here is an exmaple of how you would perform a log transformation if you needed to:
+
 ```{r Log Transformation}
-#LogPetalLength <- log(petal.length)
+
+#log transform the data and assign it to a variable
+log.petal.length <- log(Iris.Data$petal.length)
+
+#test for normality of this newly transformed data
+shapiro.test(IrisData$log.petal.length)
 ```
 
-However, each test which assumes normality also has a sample size requirement which can allow for them to produce accurate results using non-normal data. For a two-sample t-test, each group is required to have a sample size of at least 15 observations to overcome the need for normality. This cutoff is different for each type of test. Thus, if your samples fit this requirement, you can proceed without worrying about normality.
+Note that each statistical test which assumes normality also has a sample size requirement which can allow for them to produce accurate results using non-normal data. For a two-sample t-test or a one-way ANOVA test, each group is required to have a sample size of at least 15 observations to overcome the need for normality. If your samples do fit this requirement, you can proceed without worrying about normality. This cutoff is different for each type of test, so always be sure to check before you disregard any requirements.
 
-Since the data for petal length is normally distributed within each species, a log transformation is not necessary in our case. We will proceed with the non-transformed data.
 
 #### ANOVA and Two-sample T-tests  
 In order to analyze whether petal length differs significantly between species, we can perform an ANOVA. We do this with the **aov()** function. It's best to assign the function to a variable that you can then run a summary of to see the output from the ANOVA test.
@@ -270,9 +277,9 @@ The results from the pairwise comparisons indicate that the mean petal length fo
 ### Additional Tools  
 
 #### Explanation of p-values  
-A p-value represents the probability that the null hypothesis is true given the outcome observed. For most purposes, a p-value of 0.05 or lower is considered statistically significant. However, staunchly relying on this value comes with some concerns, because although it is commonly used and accepted, it is essentially an arbitrary cutoff. Thus, be sure to understand what this cutoff means so you can accurately express the strength of each result. 
+A p-value represents the probability that the null hypothesis is true given the outcome observed. For most purposes, a p-value of 0.05 or lower is considered statistically significant. However, staunchly relying on this value comes with some concerns because, although it is commonly used and accepted, it is essentially an arbitrary cutoff. Thus, be sure to understand what this cutoff means so you can accurately express the strength of each result. 
 
-Remember, a p-value of 0.05 means that there is a 5% chance of the observations being as they are if the null hypothesis is true. Thus, if you test 20 variables, it is statistically likely that at least one of them will show significance simply by chance.
+There are two main ways in which you can unwittingly abuse p-values. The first is known as p-hacking and occurs when researchers end up with results which are not statisitically significant but then continue to find new ways to manipulate the data until they eventually find something significant. The second is through what Stuart Ritchie calls "HARKing" or "Hypothesising After the Results are Known," in which researchers come up with new hypotheses after they find that their original hypothesis was insignificant. This is problematic because it is intellectually dishonest and hides insignificant results in the interest of only reporting those which are significant (often called the File Drawer Effect). Remember, a p-value of 0.05 means that there is a 5% chance of the observations being as they are if the null hypothesis is true. Thus, if you test 20 variables, it is statistically likely that at least one of them will show significance simply by chance.
 
 #### R Markdown Formatting Tricks (& Knitting)  
 
@@ -305,7 +312,9 @@ Additional credit will be awarded for providing assistance to other groups and f
 
 
 # Acknowledgements
+Ritchie, Stuart. *Science Fictions* (2020) pp. 98–99
+
 ## Group Member Contributions  
 1. Ian: Loading Libraries and Data, Using R, Exploring Your Data  
-2. Kaitlin: Tutorial screenshots, Additions to Using R, Visualization with Graphs, t-tests, Linear Models, Markdown Formatting, GitHub  
-3. Emily: Shapiro test, Log Transformation, p-value Discussion
+2. Kaitlin: Tutorial screenshots, Additions to Using R, Visualization with Graphs, t-tests, Shapiro Tests Linear Models, Markdown Formatting, GitHub  
+3. Emily: Log Transformation, p-value Discussion
