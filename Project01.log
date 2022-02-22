@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 FEB 2022 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 FEB 2022 23:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,37 +503,48 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen129
 \Gin@req@width=\dimen130
+) (/usr/local/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box30
+\UL@hyphenbox=\box31
+\UL@skip=\skip49
+\UL@hook=\toks24
+\UL@height=\dimen131
+\UL@pe=\count120
+\UL@pixel=\dimen132
+\ULC@box=\box32
+Package: ulem 2012/05/18
+\ULdepth=\dimen133
 ) (./Project01.aux)
 \openout1 = `Project01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 120.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 117.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 120.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 117.
+LaTeX Info: Redefining \microtypecontext on input line 120.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -548,17 +559,17 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen131
-\scratchbox=\box30
-\nofMPsegments=\count121
-\nofMParguments=\count122
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen132
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count121
+\scratchdimen=\dimen134
+\scratchbox=\box33
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen135
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -574,18 +585,18 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 117.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 120.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count126
+\c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 120.
+LaTeX Info: Redefining \pageref on input line 120.
+LaTeX Info: Redefining \nameref on input line 120.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -620,82 +631,83 @@ LaTeX Info: Redefining \nameref on input line 117.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 119.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 122.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 119.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 122.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 119
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 122
 .
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 119
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 122
 .
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 119.
+(Font)              <12> on input line 122.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 119.
+(Font)              <8> on input line 122.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 119.
-LaTeX Font Info:    Try loading font information for U+msa on input line 119.
+(Font)              <6> on input line 122.
+LaTeX Font Info:    Try loading font information for U+msa on input line 122.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 119.
+LaTeX Font Info:    Try loading font information for U+msb on input line 122.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 146.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 149.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 151.
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 209
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 212
 .
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 239.
+(Font)              <10> on input line 242.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 239.
+(Font)              <7> on input line 242.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 239.
+(Font)              <5> on input line 242.
 <../Tutorial_Project_8/Images/CodeChunkImage.png, id=25, 1284.8pt x 746.79pt>
 File: ../Tutorial_Project_8/Images/CodeChunkImage.png Graphic file (type png)
 <use ../Tutorial_Project_8/Images/CodeChunkImage.png>
 Package pdftex.def Info: ../Tutorial_Project_8/Images/CodeChunkImage.png  used 
-on input line 246.
+on input line 249.
 (pdftex.def)             Requested size: 469.74208pt x 273.03758pt.
-<../Tutorial_Project_8/Images/RunningCode.png, id=27, 1284.8pt x 744.7825pt>
+[2]
+<../Tutorial_Project_8/Images/RunningCode.png, id=36, 1284.8pt x 744.7825pt>
 File: ../Tutorial_Project_8/Images/RunningCode.png Graphic file (type png)
 <use ../Tutorial_Project_8/Images/RunningCode.png>
 Package pdftex.def Info: ../Tutorial_Project_8/Images/RunningCode.png  used on 
-input line 289.
+input line 294.
 (pdftex.def)             Requested size: 469.74208pt x 272.30362pt.
-[2] [3 <../Tutorial_Project_8/Images/CodeChunkImage.png> <../Tutorial_Project_8
-/Images/RunningCode.png>] [4] [5] [6]
+[3 <../Tutorial_Project_8/Images/CodeChunkImage.png>] [4 <../Tutorial_Project_8
+/Images/RunningCode.png>] [5] [6]
 
 LaTeX Warning: File `Project01_files/figure-latex/Basic Scatterplot-1.pdf' not 
-found on input line 633.
+found on input line 637.
 
 <Project01_files/figure-latex/Basic Scatterplot-1.pdf, id=59, 459.7175pt x 316.
 18124pt>
@@ -703,17 +715,17 @@ File: Project01_files/figure-latex/Basic Scatterplot-1.pdf Graphic file (type p
 df)
 <use Project01_files/figure-latex/Basic Scatterplot-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Basic Scatterplot-1.pdf  
-used on input line 633.
+used on input line 637.
 (pdftex.def)             Requested size: 459.74442pt x 316.19975pt.
 
-Overfull \hbox (64.65562pt too wide) in paragraph at lines 633--634
+Overfull \hbox (64.65562pt too wide) in paragraph at lines 637--638
 []\T1/lmr/m/n/10 (-20) Scatterplot-1.pdf [] 
  []
 
 [7]
 
 LaTeX Warning: File `Project01_files/figure-latex/Shapes by Species-1.pdf' not 
-found on input line 655.
+found on input line 659.
 
 <Project01_files/figure-latex/Shapes by Species-1.pdf, id=69, 453.695pt x 316.1
 8124pt>
@@ -721,17 +733,17 @@ File: Project01_files/figure-latex/Shapes by Species-1.pdf Graphic file (type p
 df)
 <use Project01_files/figure-latex/Shapes by Species-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Shapes by Species-1.pdf  
-used on input line 655.
+used on input line 659.
 (pdftex.def)             Requested size: 453.6939pt x 316.18047pt.
 
-Overfull \hbox (54.59332pt too wide) in paragraph at lines 655--656
+Overfull \hbox (54.59332pt too wide) in paragraph at lines 659--660
 []\T1/lmr/m/n/10 (-20) by Species-1.pdf [] 
  []
 
 [8 <./Project01_files/figure-latex/Basic Scatterplot-1.pdf>]
 
 LaTeX Warning: File `Project01_files/figure-latex/Color-coding by Species-1.pdf
-' not found on input line 677.
+' not found on input line 681.
 
 <Project01_files/figure-latex/Color-coding by Species-1.pdf, id=81, 453.695pt x
  316.18124pt>
@@ -739,51 +751,51 @@ File: Project01_files/figure-latex/Color-coding by Species-1.pdf Graphic file (
 type pdf)
 <use Project01_files/figure-latex/Color-coding by Species-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Color-coding by Species-1
-.pdf  used on input line 677.
+.pdf  used on input line 681.
 (pdftex.def)             Requested size: 453.6939pt x 316.18047pt.
 
-Overfull \hbox (54.59332pt too wide) in paragraph at lines 677--678
+Overfull \hbox (54.59332pt too wide) in paragraph at lines 681--682
 []\T1/lmr/m/n/10 (-20) by Species-1.pdf [] 
  []
 
 [9 <./Project01_files/figure-latex/Shapes by Species-1.pdf>]
 
 LaTeX Warning: File `Project01_files/figure-latex/Spruce it up-1.pdf' not found
- on input line 699.
+ on input line 703.
 
 <Project01_files/figure-latex/Spruce it up-1.pdf, id=93, 453.695pt x 316.18124p
 t>
 File: Project01_files/figure-latex/Spruce it up-1.pdf Graphic file (type pdf)
 <use Project01_files/figure-latex/Spruce it up-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Spruce it up-1.pdf  used 
-on input line 699.
+on input line 703.
 (pdftex.def)             Requested size: 453.6939pt x 316.18047pt.
 
-Overfull \hbox (30.85529pt too wide) in paragraph at lines 699--700
+Overfull \hbox (30.85529pt too wide) in paragraph at lines 703--704
 []\T1/lmr/m/n/10 (-20) it up-1.pdf [] 
  []
 
 [10 <./Project01_files/figure-latex/Color-coding by Species-1.pdf>]
 
 LaTeX Warning: File `Project01_files/figure-latex/Spruce it up-2.pdf' not found
- on input line 719.
+ on input line 723.
 
 <Project01_files/figure-latex/Spruce it up-2.pdf, id=105, 457.71pt x 316.18124p
 t>
 File: Project01_files/figure-latex/Spruce it up-2.pdf Graphic file (type pdf)
 <use Project01_files/figure-latex/Spruce it up-2.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Spruce it up-2.pdf  used 
-on input line 719.
+on input line 723.
 (pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
 
-Overfull \hbox (34.89124pt too wide) in paragraph at lines 719--720
+Overfull \hbox (34.89124pt too wide) in paragraph at lines 723--724
 []\T1/lmr/m/n/10 (-20) it up-2.pdf [] 
  []
 
 [11 <./Project01_files/figure-latex/Spruce it up-1.pdf>]
 
 LaTeX Warning: File `Project01_files/figure-latex/Scatterplot comparing Petal L
-ength and Sepal Length-1.pdf' not found on input line 743.
+ength and Sepal Length-1.pdf' not found on input line 747.
 
 <Project01_files/figure-latex/Scatterplot comparing Petal Length and Sepal Leng
 th-1.pdf, id=118, 457.71pt x 316.18124pt>
@@ -792,27 +804,27 @@ File: Project01_files/figure-latex/Scatterplot comparing Petal Length and Sepal
 <use Project01_files/figure-latex/Scatterplot comparing Petal Length and Sepal 
 Length-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Scatterplot comparing Pet
-al Length and Sepal Length-1.pdf  used on input line 743.
+al Length and Sepal Length-1.pdf  used on input line 747.
 (pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
 
-Overfull \hbox (192.02634pt too wide) in paragraph at lines 743--749
+Overfull \hbox (192.02634pt too wide) in paragraph at lines 747--753
 []\T1/lmr/m/n/10 (-20) comparing Petal Length and Sepal Length-1.pdf []
  []
 
 [12 <./Project01_files/figure-latex/Spruce it up-2.pdf>]
 
 LaTeX Warning: File `Project01_files/figure-latex/Basic boxplot-1.pdf' not foun
-d on input line 767.
+d on input line 771.
 
 <Project01_files/figure-latex/Basic boxplot-1.pdf, id=130, 459.7175pt x 315.177
 5pt>
 File: Project01_files/figure-latex/Basic boxplot-1.pdf Graphic file (type pdf)
 <use Project01_files/figure-latex/Basic boxplot-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Basic boxplot-1.pdf  used
- on input line 767.
+ on input line 771.
 (pdftex.def)             Requested size: 459.74442pt x 315.19595pt.
 
-Overfull \hbox (49.656pt too wide) in paragraph at lines 767--768
+Overfull \hbox (49.656pt too wide) in paragraph at lines 771--772
 []\T1/lmr/m/n/10 (-20) boxplot-1.pdf [] 
  []
 
@@ -820,17 +832,17 @@ Overfull \hbox (49.656pt too wide) in paragraph at lines 767--768
 l Length-1.pdf>]
 
 LaTeX Warning: File `Project01_files/figure-latex/Fancy Boxplot-1.pdf' not foun
-d on input line 791.
+d on input line 795.
 
 <Project01_files/figure-latex/Fancy Boxplot-1.pdf, id=145, 463.7325pt x 315.177
 5pt>
 File: Project01_files/figure-latex/Fancy Boxplot-1.pdf Graphic file (type pdf)
 <use Project01_files/figure-latex/Fancy Boxplot-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/Fancy Boxplot-1.pdf  used
- on input line 791.
+ on input line 795.
 (pdftex.def)             Requested size: 463.73842pt x 315.18153pt.
 
-Overfull \hbox (54.86917pt too wide) in paragraph at lines 791--792
+Overfull \hbox (54.86917pt too wide) in paragraph at lines 795--796
 []\T1/lmr/m/n/10 (-20) Boxplot-1.pdf [] 
  []
 
@@ -841,30 +853,74 @@ File: Project01_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf
 )
 <use Project01_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: Project01_files/figure-latex/unnamed-chunk-1-1.pdf  us
-ed on input line 829.
+ed on input line 833.
 (pdftex.def)             Requested size: 463.73842pt x 315.18153pt.
 [15 <./Project01_files/figure-latex/Fancy Boxplot-1.pdf>] [16 <./Project01_file
-s/figure-latex/unnamed-chunk-1-1.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 905.
+s/figure-latex/unnamed-chunk-1-1.pdf>] [17]
+Overfull \hbox (112.99329pt too wide) in paragraph at lines 1007--1007
+[]\T1/lmtt/m/n/10 ## alternative hypothesis: true difference in means between g
+roup Setosa and group Versicolor is not equal to 0[] 
+ []
 
+
+Overfull \hbox (107.7433pt too wide) in paragraph at lines 1027--1027
+[]\T1/lmtt/m/n/10 ## alternative hypothesis: true difference in means between g
+roup Setosa and group Virginica is not equal to 0[] 
+ []
+
+
+Overfull \hbox (128.74324pt too wide) in paragraph at lines 1047--1047
+[]\T1/lmtt/m/n/10 ## alternative hypothesis: true difference in means between g
+roup Versicolor and group Virginica is not equal to 0[] 
+ []
+
+[18] [19] [20]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 1272
+.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 950.
-[17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 950.
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1289
+
+ []
+
+<../Tutorial_Project_8/Images/Knitting.png, id=206, 1284.8pt x 723.70375pt>
+File: ../Tutorial_Project_8/Images/Knitting.png Graphic file (type png)
+<use ../Tutorial_Project_8/Images/Knitting.png>
+Package pdftex.def Info: ../Tutorial_Project_8/Images/Knitting.png  used on inp
+ut line 1305.
+(pdftex.def)             Requested size: 469.74208pt x 264.59691pt.
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1368
+
+ []
+
+[22 <../Tutorial_Project_8/Images/Knitting.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1371.
+[23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1371.
 (./Project01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 950.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 950.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1371.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1371.
  ) 
 Here is how much of TeX's memory you used:
- 13677 strings out of 492616
- 201726 string characters out of 6129482
- 318789 words of memory out of 5000000
- 17232 multiletter control sequences out of 15000+600000
- 63162 words of font info for 109 fonts, out of 8000000 for 9000
+ 13816 strings out of 492616
+ 203341 string characters out of 6129482
+ 318990 words of memory out of 5000000
+ 17330 multiletter control sequences out of 15000+600000
+ 63564 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,38p,787b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,38p,839b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2019/texmf-dist
@@ -876,10 +932,10 @@ m/lmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 019/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts
 /type1/public/lm/lmtti10.pfb>
-Output written on Project01.pdf (17 pages, 1430719 bytes).
+Output written on Project01.pdf (23 pages, 1938334 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 12424 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 12517 words of extra memory for PDF output out of 14400 (max. 10000000)
 
