@@ -339,4 +339,4 @@ To test out some of these tricks yourself, you'll have to knit your document to 
 ## Group Member Contributions  
 1. Ian: Loading Libraries and Data, Using R, Exploring Your Data  
 2. Kaitlin: Tutorial screenshots, Additions to Using R, Visualization with Graphs, shapiro tests, ANOVA, t-tests, Linear Models, Markdown Formatting, GitHub  
-3. Emily: Log Transformation, p-value Discussion
+3. Emily: Log Transformation, p-value Discussion, README file
