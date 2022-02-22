@@ -241,15 +241,29 @@ shapiro.test(IrisData$petal.length[IrisData$species=="Virginica"]) #Normally dis
 
 If the data you are using is not normally distributed, test to see if a logarithmic transformation would make the distribution normal. If so, you should use the log-transformed data. If not, continue on with the original, non-transformed data but note in your report that any statistical test results should be interpreted with caution, given that the base requirements for accurate use of the test have not been met. 
 
+<<<<<<< HEAD
 Since the data for petal length is normally distributed within each species, a log transformation is not necessary in our case. We will proceed with the non-transformed data. However, here is an example of how you would perform a log transformation if you needed to:
 ```{r Log Transformation}
 #log transform the data and assign it to a variable
 log.petal.length <- log(Iris.Data$petal.length)
+=======
+Since the data for petal length is normally distributed within each species, a log transformation is not necessary in our case. We will proceed with the non-transformed data. However, here is an exmaple of how you would perform a log transformation if you needed to:
+
+```{r Log Transformation}
+
+#log transform the data and assign it to a variable
+log.petal.length <- log(Iris.Data$petal.length)
+
+>>>>>>> 257ac99b5f0f9e514d7f5bea75973ceb59d5f8ff
 #test for normality of this newly transformed data
 shapiro.test(IrisData$log.petal.length)
 ```
 
 Note that each statistical test which assumes normality also has a sample size requirement which can allow for them to produce accurate results using non-normal data. For a two-sample t-test or a one-way ANOVA test, each group is required to have a sample size of at least 15 observations to overcome the need for normality. If your samples do fit this requirement, you can proceed without worrying about normality. This cutoff is different for each type of test, so always be sure to check before you disregard any requirements.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 257ac99b5f0f9e514d7f5bea75973ceb59d5f8ff
 
 #### ANOVA and Two-sample T-tests  
 In order to analyze whether petal length differs significantly between species, we can perform an ANOVA. We do this with the **aov()** function. It's best to assign the function to a variable that you can then run a summary of to see the output from the ANOVA test.
@@ -272,6 +286,7 @@ t.test(petal.length ~ species, data = VersicolorVirginica) #Significant (p < 2.2
 
 The results from the pairwise comparisons indicate that the mean petal length for the three species are each significantly different from one another. We actually see the same p-values returned by the pairwise t-tests displayed on the box-plot with p-values. This makes sense, since the p-values on the boxplot resulted from pairwise comparisons. Overall, we have evidence to support the hypothesis that petal length differs significantly between Iris species.
 
+<<<<<<< HEAD
 ### Linear Model   
 We can also use a linear model as a statistical test to look at relationships in the data. We already used a linear model to some degree when we created our scatterplot and included a regression line. However, now we're going to look at a linear model more quantitatively rather than qualitatively. The **lm()** function allows us to build a linear model with our data.  
 ```{r Linear Model}
@@ -279,6 +294,16 @@ We can also use a linear model as a statistical test to look at relationships in
 lmSpecies <- lm(petal.length ~ species, data=IrisData)
 summary(lmSpecies)
 ```
+=======
+### Additional Tools  
+
+#### Explanation of p-values  
+A p-value represents the probability that the null hypothesis is true given the outcome observed. For most purposes, a p-value of 0.05 or lower is considered statistically significant. However, staunchly relying on this value comes with some concerns because, although it is commonly used and accepted, it is essentially an arbitrary cutoff. Thus, be sure to understand what this cutoff means so you can accurately express the strength of each result. 
+
+There are two main ways in which you can unwittingly abuse p-values. The first is known as p-hacking and occurs when researchers end up with results which are not statisitically significant but then continue to find new ways to manipulate the data until they eventually find something significant. The second is through what Stuart Ritchie calls "HARKing" or "Hypothesising After the Results are Known," in which researchers come up with new hypotheses after they find that their original hypothesis was insignificant. This is problematic because it is intellectually dishonest and hides insignificant results in the interest of only reporting those which are significant (often called the File Drawer Effect). Remember, a p-value of 0.05 means that there is a 5% chance of the observations being as they are if the null hypothesis is true. Thus, if you test 20 variables, it is statistically likely that at least one of them will show significance simply by chance.
+
+#### R Markdown Formatting Tricks (& Knitting)  
+>>>>>>> 257ac99b5f0f9e514d7f5bea75973ceb59d5f8ff
 
 The p-value returned with the linear model is < 2.2e-16. This shows us that petal length is dependent on/explained by species. This is what we expected based on earlier statistical tests. For the sake of this tutorial, let's explore another linear model that looks at petal length sepal width.  
 ```{r}
@@ -336,7 +361,17 @@ To test out some of these tricks yourself, you'll have to knit your document to 
 # Acknowledgements  
 1. Ritchie, Stuart. *Science Fictions* (2020) pp. 98–99
 
+<<<<<<< HEAD
 ## Group Member Contributions  
 1. Ian: Loading Libraries and Data, Using R, Exploring Your Data  
 2. Kaitlin: Tutorial screenshots, Additions to Using R, Visualization with Graphs, shapiro tests, ANOVA, t-tests, Linear Models, Markdown Formatting, GitHub  
 3. Emily: Log Transformation, p-value Discussion
+=======
+# Acknowledgements
+Ritchie, Stuart. *Science Fictions* (2020) pp. 98–99
+
+## Group Member Contributions  
+1. Ian: Loading Libraries and Data, Using R, Exploring Your Data  
+2. Kaitlin: Tutorial screenshots, Additions to Using R, Visualization with Graphs, t-tests, Shapiro Tests Linear Models, Markdown Formatting, GitHub  
+3. Emily: Log Transformation, p-value Discussion
+>>>>>>> 257ac99b5f0f9e514d7f5bea75973ceb59d5f8ff
