@@ -118,7 +118,6 @@ str(IrisData)
 ```
 
 It can also be useful to look at the top and bottom of your dataset using the **head()** and **tail()** functions, which show the first 6 rows and last 6 rows respectively. This is useful to ensure that the data makes sense (the data is numeric if you were expecting that) and to make sure that the correct number of rows are present (for example, make sure that the last few rows are not empty). Or, if the data is time dependent, you can use these functions to make sure that the first times are in the first row and the last times are at the end.
-
 ```{r head() and tail()}
 #This chunk will output two functions, and it will separate them into two windows if you run the whole chunk. Here, the left window is the head function, and the right window is the tail function. The output windows will always proceed left to right to correspond with your code from top to bottom.
 head(IrisData)
@@ -132,7 +131,11 @@ summary(IrisData)
 ```
 
 ### Visualization with Graphs
-Now that we've spent a substantial amount of time exploring and organizing our data, we're ready to start analyzing it! The first step here is to visualize our data since up until this point, all we've been looking at are numbers (which can be hard for identifying relationships and patterns between variables). When considering what graphs may be best for visualizing our data, we should consider our questions of interest and 
+Now that we've spent a substantial amount of time exploring and organizing our data, we're ready to start analyzing it! The first step here is to visualize our data since up until this point, all we've been looking at are numbers (which can be hard for identifying relationships and patterns between variables). When considering what graphs may be best for visualizing our data, we should consider our questions of interest and what types of variables we're dealing with. As a reminder, our two questions of interest are below:
+1. Are sepal and petal dimensions correlated within a single species?
+2. Do sepal and petal dimensions differ between Iris species?
+
+
 
 
 ### Hypothesis Testing with Statistical Tests
