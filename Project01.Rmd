@@ -245,9 +245,9 @@ If the data you are using is not normally distributed, test to see if a logarith
 Since the data for petal length is normally distributed within each species, a log transformation is not necessary in our case. We will proceed with the non-transformed data. However, here is an example of how you would perform a log transformation if you needed to:
 ```{r Log Transformation}
 #log transform the data and assign it to a variable
-log.petal.length <- log(Iris.Data$petal.length)
+logpetal.length <- log(IrisData$petal.length)
 #test for normality of this newly transformed data
-shapiro.test(IrisData$log.petal.length)
+shapiro.test(IrisData$logpetal.length)
 ```
 
 Note that each statistical test which assumes normality also has a sample size requirement which can allow for them to produce accurate results using non-normal data. For a two-sample t-test or a one-way ANOVA test, each group is required to have a sample size of at least 15 observations to overcome the need for normality. If your samples do fit this requirement, you can proceed without worrying about normality. This cutoff is different for each type of test, so always be sure to check before you disregard any requirements.
