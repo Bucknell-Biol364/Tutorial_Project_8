@@ -5,6 +5,7 @@ date: "21 Feb 2022"
 output:
   pdf_document: default
   html_notebook: default
+  github_document: default
 subtitle: Biology 368/664 Bucknell University
 ---
 
@@ -222,7 +223,7 @@ ggplot(IrisData, aes(x=species, y=petal.length, fill=species)) + #Addition of fi
   labs(title = "Petal Length for Three Iris Species") + #Gives plot a title
   theme(plot.title = element_text(hjust = 0.5)) + #Centers title
   theme(legend.position = "none") + #Removes legend
-  stat_compare_means(comparisons = my_comparisons)
+  stat_compare_means(comparisons = my_comparisons) #Adds p-values for pairwise comparisons
 ```
 
 ## Hypothesis Testing with Statistical Tests  
