@@ -247,7 +247,7 @@ Since the data for petal length is normally distributed within each species, a l
 #log transform the data and assign it to a variable
 logpetal.length <- log(IrisData$petal.length)
 #test for normality of this newly transformed data
-shapiro.test(IrisData$logpetal.length)
+shapiro.test(logpetal.length)
 ```
 
 Note that each statistical test which assumes normality also has a sample size requirement which can allow for them to produce accurate results using non-normal data. For a two-sample t-test or a one-way ANOVA test, each group is required to have a sample size of at least 15 observations to overcome the need for normality. If your samples do fit this requirement, you can proceed without worrying about normality. This cutoff is different for each type of test, so always be sure to check before you disregard any requirements.
