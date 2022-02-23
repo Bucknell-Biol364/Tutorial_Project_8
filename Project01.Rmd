@@ -6,6 +6,7 @@ output:
   pdf_document: default
   html_notebook: default
   github_document: default
+  md_document: default
 subtitle: Biology 368/664 Bucknell University
 ---
 
@@ -335,7 +336,8 @@ To test out some of these tricks yourself, you'll have to knit your document to 
 ![Knitting](../Tutorial_Project_8/Images/Knitting.png)
 
 # Acknowledgements  
-1. Ritchie, Stuart. *Science Fictions* (2020) pp. 98–99
+1. Guides E. Add P-values and Significance Levels to ggplots | R-bloggers. 8 Jun 2017 [cited 23 Feb 2022]. Available: https://www.r-bloggers.com/2017/06/add-p-values-and-significance-levels-to-ggplots/
+2. Ritchie, Stuart. *Science Fictions* (2020) pp. 98–99
 
 ## Group Member Contributions  
 1. Ian: Loading Libraries and Data, Using R, Exploring Your Data  
